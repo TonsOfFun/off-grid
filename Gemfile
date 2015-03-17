@@ -23,6 +23,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'rubyzoho', '0.5.0'
+
+group :test do
+  gem 'vcr', '2.9.3'
+  gem 'webmock'
+end
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 group :development do
 	gem 'spring'
@@ -30,6 +37,7 @@ group :development do
 end
 
 group :development, :test do
+	gem 'dotenv-rails'
   gem 'rspec-rails', '~> 3.0'
 end
 # Use ActiveModel has_secure_password
