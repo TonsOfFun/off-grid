@@ -1,4 +1,4 @@
-class Zoho::Project
+class OffGrid::Zoho::Project
   attr_accessor :potential
 
   def initialize(potential)

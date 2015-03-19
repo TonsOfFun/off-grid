@@ -28,6 +28,7 @@ gem 'clockwork', '1.1.0'
 # Background Jobs
 gem 'sidekiq', '3.3.2'
 
+gem 'hashie'
 group :test do
   gem 'vcr', '2.9.3'
   # gem 'webmock', '1.20.4'
@@ -40,6 +41,9 @@ group :development do
 end
 
 group :development, :test do
+	gem 'byebug'
+	gem 'factory_girl_rails'
+	gem 'faker'
 	gem 'dotenv-rails'
   gem 'rspec-rails', '~> 3.0'
 end

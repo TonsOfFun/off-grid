@@ -19,7 +19,6 @@ class CreateProjects < ActiveRecord::Migration
 
       t.timestamps
     end
-
     add_index :projects, :zoho_id
   end
 end
