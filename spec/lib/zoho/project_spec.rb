@@ -5,9 +5,9 @@ RSpec.describe Zoho::Project do
   let(:project) { Zoho::Project.new(potential) }
 
   describe "#zoho_id" do
-    subject { project.id }
+    subject { project.zoho_id }
 
-    it { is_expected.to eq(potential.id) }
+    it { is_expected.to eq(potential.id.to_i) }
   end
 
   describe "#name" do
@@ -19,13 +19,13 @@ RSpec.describe Zoho::Project do
   describe "#amount" do
     subject { project.amount }
 
-    it { is_expected.to eq(potential.amount) }
+    it { is_expected.to eq(potential.amount.to_f) }
   end
 
   describe "#zoho_account_id" do
     subject { project.zoho_account_id }
 
-    it { is_expected.to eq(potential.accountid) }
+    it { is_expected.to eq(potential.accountid.to_i) }
   end
 
   describe "#stage" do
@@ -34,8 +34,8 @@ RSpec.describe Zoho::Project do
   	it { is_expected.to eq(potential.stage)}
   end
 
-  describe "#type" do
-  	subject { project.type }
+  describe "#project_type" do
+  	subject { project.project_type }
 
   	it { is_expected.to eq(potential.type)}
   end
@@ -43,7 +43,7 @@ RSpec.describe Zoho::Project do
   describe "#probability" do
   	subject { project.probability }
 
-  	it { is_expected.to eq(potential.probability)}
+  	it { is_expected.to eq(potential.probability.to_f)}
   end
 
   describe "#next_step" do
@@ -73,7 +73,7 @@ RSpec.describe Zoho::Project do
   describe "#expected_revenue" do
   	subject { project.expected_revenue }
 
-  	it { is_expected.to eq(potential.expected_revenue)}
+  	it { is_expected.to eq(potential.expected_revenue.to_i)}
   end
 
   describe "#system_type" do
