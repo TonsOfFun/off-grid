@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'rubyzoho', '0.5.0'
+gem 'clockwork', '1.1.0'
 
 group :test do
   gem 'vcr', '2.9.3'
